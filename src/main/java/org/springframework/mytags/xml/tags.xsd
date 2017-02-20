@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema xmlns="http://www.fanll.com/schema/tags"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.fanll.com/schema/tags"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:element name="A">
+		<xsd:complexType>
+			<xsd:choice minOccurs="1" maxOccurs="unbounded">
+				<xsd:element ref="B" />
+			</xsd:choice>
+			<xsd:attribute name="id" type="xsd:ID" />
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="B">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="C" />
+			</xsd:choice>
+			<xsd:attribute name="id" type="xsd:ID" />
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="C">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:ID" />
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

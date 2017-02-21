@@ -1,4 +1,4 @@
-package com.custom.test;
+package com.custom.mytags.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Created by fanlinlong on 2017/2/14.
  */
 @RunWith(SpringRunner.class) // 使用junit4进行测试
-@ContextConfiguration("classpath:applicationcontext.xml")
+@ContextConfiguration("classpath:test.xml")
 public class MyTagsTest {
 
 	@Autowired
